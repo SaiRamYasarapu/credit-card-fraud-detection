@@ -18,7 +18,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ── Load Data ─────────────────────────────────────────────────────────────────
 print("Loading data...")
-df = pd.read_csv("data/creditcard.csv")
+df = pd.read_csv("C:/Users/Sai Ram/Desktop/git_projects/credit-card-fraud-detection/creditcard.csv")
 print(f"Raw shape: {df.shape}")
 
 # ── Feature Engineering ───────────────────────────────────────────────────────

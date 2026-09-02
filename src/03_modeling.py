@@ -7,6 +7,7 @@ Trains an XGBoost classifier with SMOTE to handle class
 imbalance. Saves the trained model for evaluation.
 """
 
+
 import pandas as pd
 import numpy as np
 import pickle
@@ -103,7 +104,6 @@ xgb_model = xgb.XGBClassifier(
     subsample=0.8,
     colsample_bytree=0.8,
     scale_pos_weight=scale_pos_weight,
-    use_label_encoder=False,
     eval_metric="aucpr",        # optimize for precision-recall AUC
     random_state=42,
     n_jobs=-1,
@@ -165,7 +165,7 @@ print(classification_report(y_test, y_pred_final, target_names=["Legitimate", "F
 with open(f"{OUTPUT_DIR}/xgb_model.pkl", "wb") as f:
     pickle.dump(xgb_model, f)
 with open(f"{OUTPUT_DIR}/rf_model.pkl", "wb") as f:
-    pickle.dump(rf_model, f)
+    pickle.dump(rf, f)
 
 # Save predictions for evaluation script
 pd.DataFrame({

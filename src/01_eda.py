@@ -23,7 +23,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ── Load Data ─────────────────────────────────────────────────────────────────
 print("Loading data...")
-df = pd.read_csv("data/creditcard.csv")
+df = pd.read_csv("C:/Users/Sai Ram/Desktop/git_projects/credit-card-fraud-detection/creditcard.csv")
 print(f"Dataset shape: {df.shape}")
 print(f"Columns: {df.columns.tolist()}")
 print(f"\nClass distribution:\n{df['Class'].value_counts()}")
